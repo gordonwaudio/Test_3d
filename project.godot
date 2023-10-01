@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="Squash the Creeps (3D)"
+run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.1")
 config/icon="res://icon.png"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=540
 
 [input]
 
@@ -46,7 +52,14 @@ jump={
 ]
 }
 
+[layer_names]
+
+3d_physics/layer_1="player"
+3d_physics/layer_2="enemies"
+3d_physics/layer_3="world"
+
 [rendering]
 
+renderer/rendering_method="mobile"
 quality/driver/driver_name="GLES2"
 quality/filters/msaa=3
